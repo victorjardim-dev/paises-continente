@@ -92,6 +92,10 @@ img {
   border-color: #76d;
 }
 
+.grid-continentes li:last-child {
+  order: -1;
+}
+
 .titulo-continentes {
   grid-column: 1/4;
 }
