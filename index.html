@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <title>Países do Mundo por Continente</title>
+  </head>
+  <body>
+    <header>
+      <div class="topo container-geral">
+        <p>
+          Desenvolvido por
+          <a href="https://victorjardim.dev" target="_blank">Victor Jardim ⮕</a>
+        </p>
+        <p>
+          API utilizada
+          <a href="https://restcountries.com/v3/all" target="_blank"
+            >RestCountries ⮕</a
+          >
+        </p>
+      </div>
+    </header>
+
+    <section class="container-geral">
+      <h1 class="titulo">Países do Mundo por Continente</h1>
+      <div>
+        <h2>Continentes</h2>
+        <ul class="lista-continentes grid-continentes">
+          <li>Africa</li>
+          <li>Antarctica</li>
+          <li>Asia</li>
+          <li>Europe</li>
+          <li>North America</li>
+          <li>Oceania</li>
+          <li>South America</li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="container-geral">
+      <h2 class="titulo-continentes">
+        Continente <span class="regiao">-</span>
+      </h2>
+      <div class="grid-container"></div>
+    </section>
+
+    <script src="script.js"></script>
+  </body>
+</html>

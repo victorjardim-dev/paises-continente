@@ -1,0 +1,154 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 16px;
+  color: #333;
+  background: #f7f7f7;
+  font-family: 'IBM Plex Mono', monospace;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: 120px;
+  object-fit: cover;
+}
+
+.container-geral {
+  max-width: 1400px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.titulo {
+  text-transform: uppercase;
+  position: relative;
+  font-size: 2rem;
+}
+
+.titulo::before {
+  content: "";
+  width: 12px;
+  height: 12px;
+  display: inline-block;
+  position: absolute;
+  left: -26px;
+  top: 50%;
+  transform: translateY(-50%);
+  background: #76d;
+}
+
+.topo {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  gap: 80px;
+}
+
+.topo p a {
+  color: #76d;
+  text-decoration: none;
+}
+
+.topo p a:hover {
+  text-decoration: underline;
+}
+
+.grid-continentes {
+  padding: 0;
+  margin-bottom: 40px;
+  list-style: none;
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.grid-continentes li {
+  border: 1px solid rgba(0, 0, 0, .1);
+  flex: 1;
+  text-align: center;
+  min-width: 120px;
+  margin: 8px;
+  padding: 8px;
+  cursor: pointer;
+  font-weight: 700;
+  color: #555;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.grid-continentes li:hover {
+  border-color: #76d;
+  background: #fff;
+}
+
+.grid-continentes li.ativo {
+  background: #fff;
+  color: #76d;
+  border-color: #76d;
+}
+
+.titulo-continentes {
+  grid-column: 1/4;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 30px;
+  margin-bottom: 120px;
+}
+
+.paises-box {
+  border: 1px solid #ccc;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  animation: mostraPaises .9s;
+  padding: 10px;
+  background: rgba(0, 0, 0, .1);
+  transition: .3s;
+}
+
+.paises-box:hover {
+  border-color: #76d;
+  box-shadow: 2px 2px 2px 0 rgba(0, 0, 0, .1);
+}
+
+@keyframes mostraPaises {
+  from {
+    opacity: 0;
+    transform: translate3d(0,-30px,0);
+  }
+  to {
+    opacity: 1;
+    transform: translate3d(0,0,0);
+  }
+}
+
+.paises-box h3 {
+  color: #76d;
+  text-transform: uppercase;
+}
+
+.paises-box figcaption {
+  margin-top: 12px;
+  text-align: center;
+}
+
+@media (max-width: 1100px) {
+  .grid-container {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (max-width: 600px) {
+  .grid-container {
+    grid-template-columns: 1fr;
+  }
+}
